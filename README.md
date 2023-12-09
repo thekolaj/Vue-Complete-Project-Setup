@@ -161,7 +161,7 @@ All the steps to setup you complete Vue project in one place. The aim is to have
      },
    ```
 
-1. `vitest.config.ts` now throws an error in imports. In Vitest exercise files it is just disabled, so here we do the same.
+1. (Unclear) `vitest.config.ts` now throws an error in imports. In Vitest exercise files it is just disabled, so here we do the same.
 
    ```javascript
    import { fileURLToPath } from 'node:url'
@@ -266,7 +266,7 @@ All the steps to setup you complete Vue project in one place. The aim is to have
            uses: actions/deploy-pages@v1
    ```
 
-1. (Unclear) Edit `vite.config.ts` to add `GITHUB_REPOSITORY`.
+1. Edit `vite.config.ts` to add `GITHUB_REPOSITORY`.
 
    ```javascript
    import { fileURLToPath, URL } from 'node:url'
