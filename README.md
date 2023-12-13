@@ -149,7 +149,7 @@ All the steps to setup you complete Vue project in one place. The aim is to have
    }
    ```
 1. (Optional) Add style linting to your package scripts: Add `"lint:style": "npx stylelint \"**/*.(s?css|vue)\"",` to the scripts object in your package.json file. This will allow you to run `npm run lint:style` to lint all of your styles in CSS and Vue files.
-1. (Unclear) Change the `type-check` to `"type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",`, otherwise it does not build.
+1. (Unclear) Change the `type-check` in your package.json file ,to: `"type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",`, otherwise it does not build.
 
    ```json
      {
