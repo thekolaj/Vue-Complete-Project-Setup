@@ -311,7 +311,13 @@ All the steps to setup you complete Vue project in one place. The aim is to have
 
 1. Clean up provided code. In `./src` you can ether delete `assets`, `components`, `views`, and clear outs `App.vue`, or you can adapt them to your needs. Remove `/about` from `routes`.
 
-1. Let us also prepare our project to upload to Turing submissions while we're at it. Go to your designated repository and download your `.ipynb` assignment file. Place it in your project folder, otherwise it will be destroyed once we rewrite this repo.
+1. Let us also prepare our project to upload to Turing submissions while we're at it. Go to your designated repository and download your `.ipynb` assignment file. We will overwrite this repo later, and if it's not there, you will not be able to see your assignment on the platform. (Hopefully the way this work will change in the future.)
+
+1. You are not allowed to upload your `.ipynb` to your public repo.
+    > @Giedrius Zebrauskas on discord:
+    > ... you potentially leak Turing tasks; show that this was not fully your own personal work but something for studies (you can of course mention that in interviews, but there's no need to make it obvious in the repo itself)
+
+    So save it in the project folder and and add `*.ipynb` to your `.gitignore` file.
 
 1. Copy Turing Submissions remote link, add it as a separate remote with git command
 
@@ -325,7 +331,7 @@ All the steps to setup you complete Vue project in one place. The aim is to have
    git remote add turing https://github.com/TuringCollegeSubmissions/<your-project-number>.git
    ```
 
-   Now your public remote is called `origin` and is the default one, while `turing` is the private submission.
+   Now your public remote is called `origin` and is the default one, while `turing` is the private submission repo.
 
 1. Since this is a different project from what turing created, we need to overwrite their repo.
 
@@ -333,4 +339,7 @@ All the steps to setup you complete Vue project in one place. The aim is to have
    git push turing main -f
    ```
 
+1. After pushing your `turing` repo, we will add our `.ipynb` in there manually through the Git website. For now, this is the simplest way.
+
 1. We can now simply `git push origin main` to update our website, `git push turing main` to submit you project.
+
