@@ -341,5 +341,35 @@ All the steps to setup you complete Vue project in one place. The aim is to have
 
 1. After pushing your `turing` repo, we will add our `.ipynb` in there manually through the Git website. For now, this is the simplest way.
 
+
 1. We can now simply `git push origin main` to update our website, `git push turing main` to submit you project.
 
+
+## (Optional) Create a git branch for your turing repository.
+
+1. Create a new branch and move there
+
+   ```
+   git checkout -b for-turing
+   ```
+
+1. Place your `.ipynb` file into the directory or remove `*.ipynb` from `.gitignore`.
+
+1. Remove or disable .github/workflows/deploy.yaml. It break in a privet repo that does not have Pages enabled.
+
+1. Commit the changes. Now you should have a modified for-turing branch.
+
+1. We will now make our this brach push into Turing repo by default, and also onto the main branch there so reviewers don't have to switch.
+
+    ```
+    git push --set-upstream turing for-turing:main
+    ```
+
+1. You can now run `git push`. It should update your turing repo's main branch.
+
+1. Overview:
+    - `git checkout main`: Update all your code here
+    - `git push` from `main`: Update your public repo.
+    - `git checkout for-turing`: Go to your turing branch
+    - `git rebase main` from `for-turing`: Get all the latest updates from main
+    - `git push` from `for-turing`: Update the private review repo.
