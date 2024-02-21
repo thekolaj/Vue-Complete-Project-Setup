@@ -311,6 +311,11 @@ All the steps to setup you complete Vue project in one place. The aim is to have
 
 1. Clean up provided code. In `./src` you can ether delete `assets`, `components`, `views`, and clear outs `App.vue`, or you can adapt them to your needs. Remove `/about` from `routes`.
 
+1. Create a README.md file in the Turing repo that links to your public project repo and deployed app.
+
+
+# Deprecated: Uploading to Turing Repo
+
 1. Let us also prepare our project to upload to Turing submissions while we're at it. Go to your designated repository and download your `.ipynb` assignment file. We will overwrite this repo later, and if it's not there, you will not be able to see your assignment on the platform. (Hopefully the way this work will change in the future.)
 
 1. You are not allowed to upload your `.ipynb` to your public repo.
@@ -371,5 +376,5 @@ All the steps to setup you complete Vue project in one place. The aim is to have
     - `git checkout main`: Update all your code here
     - `git push` from `main`: Update your public repo.
     - `git checkout for-turing`: Go to your turing branch
-    - `git rebase main` from `for-turing`: Get all the latest updates from main
+    - `git merge main` from `for-turing`: Get all the latest updates from main
     - `git push` from `for-turing`: Update the private review repo.
